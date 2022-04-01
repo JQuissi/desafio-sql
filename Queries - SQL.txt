@@ -1,0 +1,24 @@
+#Listar todas as vendas (ID) e seus respectivos clientes apenas no ano de 2020
+
+#Primeiro foi criado um banco de dados;
+#Criação da tabela: desafio.db_teste com os dados;
+#Selecionando as colunas ID e cliente da tabela criada a partir do arquivo em excel;
+#Filtrando pela data da venda, ano de 2020.
+
+SELECT
+	ID,
+    Cliente
+FROM desafio.db_teste
+WHERE DatadaVenda >= '2020-01-01' and DatadaVenda <= '2020-12-31';
+
+
+#Listar a equipe de cada vendedor
+
+#Selecionando apenas valores distintos (diferentes) para eliminar os valores duplicados;
+#organiza os resultados de acordo com a coluna Vendedor.
+
+SELECT distinct
+	Vendedor, 
+	Equipe
+FROM desafio.db_teste
+ORDER BY Vendedor;
